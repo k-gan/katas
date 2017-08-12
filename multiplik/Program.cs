@@ -10,6 +10,7 @@ namespace Multiplik
         {
             Benchmark(new MultiplyFirstSolution());
             Benchmark(new MultiplySecondSolution());
+            Benchmark(new MultiplyThirdSolution());
         }
 
         static void Benchmark(IMultiply multiply)
@@ -21,9 +22,9 @@ namespace Multiplik
 
             var testNo = 0;
 
-            for(var i = 0; i < RunNum; i++)
+            for (var i = 0; i < RunNum; i++)
                 testNo = testFramework.CheckSolution(multiply);
-            
+
             watch.Stop();
 
             Console.WriteLine();
@@ -31,7 +32,7 @@ namespace Multiplik
             Console.WriteLine($"Checked {multiply.GetType().FullName}");
             Console.BackgroundColor = ConsoleColor.Green;
             Console.WriteLine(
-                $"Did {testNo} checks times {RunNum} in" + 
+                $"Did {testNo} checks times {RunNum} in" +
                 $" {watch.ElapsedTicks} ticks or {watch.ElapsedMilliseconds} ms.");
 
             Console.WriteLine();

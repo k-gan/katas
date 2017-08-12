@@ -6,7 +6,7 @@ namespace Multiplik
     {
         private static void AssertEqual(long actual, long expected)
         {
-            if(expected != actual)
+            if (expected != actual)
                 throw new InvalidOperationException(
                     $"Actual ({actual}) is not equal expected ({expected}).");
 
@@ -20,7 +20,7 @@ namespace Multiplik
             AssertEqual(multiply.Multiply(-1, -2), 2);
             AssertEqual(multiply.Multiply(-1, 2), -2);
             AssertEqual(multiply.Multiply(10, 5), 50);
-            AssertEqual(multiply.Multiply(-10,  5), -50);
+            AssertEqual(multiply.Multiply(-10, 5), -50);
             AssertEqual(multiply.Multiply(10, -5), -50);
             AssertEqual(multiply.Multiply(-10, -5), 50);
 
